@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="stylePrueba.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="../jquery-2.1.4.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="prueba.js"></script>
 	<title>Prueba</title>
 </head>
+
 <body>
 	<header>
 		<span id="titulo">Inicio</span>
+		<section id="contMenuIcon">
+			<span class="material-icons md-24">menu</span>
+		</section>
 	</header>
-	<section id="contenedorImg">
-		<img src="menu.png">
-	</section>
 	<nav id="contenedorMenu">
-		<div id="menu">
-			
-		</div>
+		<div id="menu"></div>
 	</nav>
 	<section id="contenido">
 		<div class="tarjeta">
@@ -46,8 +47,9 @@
 	</section>
 	<section id="contenedorArriba">
 		<div id="arriba" onclick="arriba()">
-			<img src="up.png" alt="Arriba"/>
+			<span class="material-icons md-24">expand_less</span>
 		</div>
 	</section>
 </body>
+
 </html>
