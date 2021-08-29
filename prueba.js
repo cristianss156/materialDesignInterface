@@ -55,27 +55,19 @@ $(window).scroll(() => {
 	let scroll = $(this).scrollTop();
 
 	if (scroll >= 190) {
-		$("header").css({
-			'marginTop': '-192px'
-		});
+		$('#header').toggleClass('collapseHeader');
 		$("#titulo").css({
 			'marginTop': '205px',
 			'fontSize': '24px'
 		});
-		$("#contenedorArriba").css({
-			'bottom': '25px'
-		});
+		$("#contenedorArriba").toggleClass('activeUp');
 	} else if (scroll === 0) {
-		$("header").css({
-			'marginTop': '0'
-		});
+		$('#header').toggleClass('collapseHeader', false);
 		$("#titulo").css({
 			'marginTop': '160px',
 			'fontSize': '56px'
 		});
-		$("#contenedorArriba").css({
-			'bottom': '-70px'
-		});
+		$("#contenedorArriba").toggleClass('activeUp', false);
 	}
 
 });
