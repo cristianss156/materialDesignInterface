@@ -1,25 +1,19 @@
-$(document).ready(function () {
-	$(".tarjeta").click(function () {
-		if ($(this).height() == 75) {
-			$(this).css({
-				'zIndex': '5',
-				'boxShadow': '0px 5px 10px 5px rgba(0,0,0,0.16),0px 5px 10px 5px rgba(0,0,0,0.23)',
-				'height': '300px'
-			});
-			$(".tarjeta").not($(this)).css({
-				'zIndex': '1',
-				'boxShadow': '0px 2px 5px 0px rgba(0,0,0,0.16),0px 2px 5px 0px rgba(0,0,0,0.23)',
-				'height': '75px'
-			});
-		} else if ($(this).height() == 300) {
-			$(this).css({
-				'zIndex': '1',
-				'boxShadow': '0px 2px 5px 0px rgba(0,0,0,0.16),0px 2px 5px 0px rgba(0,0,0,0.23)',
-				'height': '75px'
-			});
-		}
+$(document).ready(() => {
+
+	$(".card").click(function () {
+
+		let items = document.querySelectorAll('.cardActive');
+
+		items.forEach((i) => {
+			i.classList.remove('cardActive');
+		});
+
+		$(this).toggleClass('cardActive');
+
 	});
-	$("#contMenuIcon").click(function () {
+
+	$("#contMenuIcon").click(() => {
+
 		if ($("#menu").marginLeft != 0) {
 			$("#contenedorMenu").css({
 				'display': 'block'
@@ -30,8 +24,11 @@ $(document).ready(function () {
 				});
 			}, 100);
 		}
+
 	});
-	$("#contenedorMenu").click(function () {
+
+	$("#contenedorMenu").click(() => {
+
 		$("#menu").css({
 			'marginLeft': '-27%'
 		});
@@ -39,12 +36,25 @@ $(document).ready(function () {
 			$("#contenedorMenu").css({
 				'display': 'none'
 			});
-		}, 500);
+		}, 250);
+
 	});
+
+	$('#arriba').click(() => {
+
+		$("html, body").animate({
+			scrollTop: "0px"
+		}, 250);
+
+	});
+
 });
 
-$(window).scroll(function () {
-	if ($(this).scrollTop() >= 192) {
+$(window).scroll(() => {
+
+	let scroll = $(this).scrollTop();
+
+	if (scroll >= 190) {
 		$("header").css({
 			'marginTop': '-192px'
 		});
@@ -55,7 +65,7 @@ $(window).scroll(function () {
 		$("#contenedorArriba").css({
 			'bottom': '25px'
 		});
-	} else if ($(this).scrollTop() === 0) {
+	} else if (scroll === 0) {
 		$("header").css({
 			'marginTop': '0'
 		});
@@ -67,25 +77,5 @@ $(window).scroll(function () {
 			'bottom': '-70px'
 		});
 	}
-});
 
-$(window).resize(function () {
-	if ($(window).width() < 767) {
-		$(".tarjeta").css({
-			'marginLeft': '0',
-			'width': '100%'
-		});
-	} else if ($(window).width() > 767) {
-		$(".tarjeta").css({
-			'marginLeft': '15%',
-			'width': '70%'
-		});
-	}
 });
-
-//función para volver arriba en la aplicación
-function arriba() {
-	$("html, body").animate({
-		scrollTop: "0px"
-	}, 250);
-}

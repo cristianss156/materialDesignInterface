@@ -1,8 +1,8 @@
 body {
 	margin: 0;
-	background-color: #E6E6E6;
-	font-family: 'Roboto', sans-serif;
 	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	background-color: #E6E6E6;
 }
 
 header {
@@ -12,15 +12,15 @@ header {
 	width: 100%;
 	height: 256px;
 	background-color: #3F51B5;
-	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.26);
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.26);
 	transition-duration: 0.5s;
 }
 
 #contMenuIcon {
-	cursor: pointer;
-	display: flex;
 	z-index: 5;
+	cursor: pointer;
 	position: fixed;
+	display: flex;
 	float: left;
 	margin-left: 12px;
 	margin-top: 8px;
@@ -37,9 +37,9 @@ header {
 #titulo {
 	float: left;
 	margin-left: 72px;
-	color: white;
-	font-size: 56px;
 	margin-top: 160px;
+	font-size: 56px;
+	color: white;
 	line-height: 1.5;
 	transition-duration: 0.5s;
 }
@@ -59,8 +59,8 @@ header {
 	height: 100%;
 	width: 25%;
 	background-color: #fff;
-	box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.26);
-	transition-duration: 0.5s;
+	box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.26);
+	transition-duration: 0.25s;
 }
 
 #contenido {
@@ -71,7 +71,7 @@ header {
 	width: 100%;
 }
 
-.tarjeta {
+.card {
 	z-index: 1;
 	cursor: pointer;
 	position: relative;
@@ -79,10 +79,16 @@ header {
 	margin-left: 15%;
 	width: 70%;
 	height: 75px;
-	border-radius: 3px;
-	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16), 0px 2px 5px 0px rgba(0, 0, 0, 0.23);
 	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
 	transition-duration: 0.5s;
+}
+
+.cardActive {
+	z-index: 5;
+	height: 300px;
+	box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.16), 0 5px 10px 5px rgba(0, 0, 0, 0.23);
 }
 
 /*estilo boton para volver arriba*/
@@ -96,7 +102,7 @@ header {
 	width: 56px;
 	height: 56px;
 	border-radius: 100px;
-	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16), 0px 2px 5px 0px rgba(0, 0, 0, 0.23);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.23);
 	transition-duration: 0.25s;
 }
 
@@ -105,15 +111,15 @@ header {
 	overflow: hidden;
 	width: 56px;
 	height: 56px;
-	border-radius: 100px;
-	background-color: #D32F2F;
 	justify-content: center;
 	align-items: center;
+	border-radius: 100px;
+	background-color: #D32F2F;
 	transition-duration: 0.25s;
 }
 
 #contenedorArriba:active {
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14), 0px 8px 12px rgba(0, 0, 0, 0.28);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14), 0 8px 12px rgba(0, 0, 0, 0.28);
 }
 
 #arriba:active {
@@ -122,4 +128,14 @@ header {
 
 #arriba span {
 	color: #fff;
+}
+
+/* media queries */
+@media only screen and (max-width: 770px) {
+
+	.card {
+		margin-left: 0;
+		width: 100%;
+	}
+
 }
