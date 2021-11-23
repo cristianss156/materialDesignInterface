@@ -5,6 +5,7 @@ body {
 	background-color: #E6E6E6;
 }
 
+/* Estilo de la cabecera */
 header {
 	z-index: 4;
 	position: fixed;
@@ -38,6 +39,7 @@ header {
 	color: #fff;
 }
 
+/* Estilo titulo */
 #titulo {
 	float: left;
 	margin-left: 72px;
@@ -48,12 +50,18 @@ header {
 	transition-duration: 0.5s;
 }
 
+/* Estilos del menu */
 #contenedorMenu {
 	z-index: 6;
-	display: none;
 	position: fixed;
+	display: none;
 	height: 100%;
 	width: 100%;
+	transition-duration: 0.5s;
+}
+
+.contenedorMenu_active {
+	display: block !important;
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -64,7 +72,14 @@ header {
 	width: 25%;
 	background-color: #fff;
 	box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.26);
-	transition-duration: 0.25s;
+}
+
+.menu_active {
+	animation: showMenu 0.25s linear 0s normal forwards;
+}
+
+.menu_hide {
+	animation: hideMenu 0.25s linear 0s normal forwards;
 }
 
 #contenido {
@@ -75,6 +90,7 @@ header {
 	width: 100%;
 }
 
+/* Estilo tarjetas */
 .card {
 	z-index: 1;
 	cursor: pointer;
@@ -89,6 +105,7 @@ header {
 	transition-duration: 0.5s;
 }
 
+/*  */
 .cardActive {
 	z-index: 5;
 	height: 300px;
@@ -110,6 +127,7 @@ header {
 	transition-duration: 0.25s;
 }
 
+/*estilo boton para volver arriba*/
 #arriba {
 	display: flex;
 	overflow: hidden;
@@ -146,4 +164,25 @@ header {
 		width: 100%;
 	}
 
+}
+
+@keyframes showMenu {
+	0% {
+		margin-left: -27%;
+	}
+
+	100% {
+		margin-left: 0;
+	}
+}
+
+@keyframes hideMenu {
+	0% {
+		margin-left: 0;
+
+	}
+
+	100% {
+		margin-left: -27%;
+	}
 }

@@ -1,32 +1,5 @@
 $(document).ready(() => {
 
-	$(".card").click(function () {
-
-		let items = document.querySelectorAll('.cardActive');
-
-		items.forEach((i) => {
-			i.classList.remove('cardActive');
-		});
-
-		$(this).toggleClass('cardActive');
-
-	});
-
-	$("#contMenuIcon").click(() => {
-
-		if ($("#menu").marginLeft != 0) {
-			$("#contenedorMenu").css({
-				'display': 'block'
-			});
-			setTimeout(function () {
-				$("#menu").css({
-					'marginLeft': '0'
-				});
-			}, 100);
-		}
-
-	});
-
 	$("#contenedorMenu").click(() => {
 
 		$("#menu").css({
