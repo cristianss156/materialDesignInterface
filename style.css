@@ -47,7 +47,14 @@ header {
 	font-size: 56px;
 	color: white;
 	line-height: 1.5;
-	transition-duration: 0.5s;
+}
+
+.titulo_collapse {
+	animation: minimizeTitle 0.25s linear 0s normal forwards;
+}
+
+.titulo_spawn {
+	animation: maximizeTitle 0.35s linear 0s normal forwards;
 }
 
 /* Estilos del menu */
@@ -97,6 +104,7 @@ header {
 	position: relative;
 	margin-top: 8px;
 	margin-left: 15%;
+	padding: 10px;
 	width: 70%;
 	height: 75px;
 	background-color: white;
@@ -105,7 +113,7 @@ header {
 	transition-duration: 0.5s;
 }
 
-/*  */
+/* Active card style */
 .cardActive {
 	z-index: 5;
 	height: 300px;
@@ -179,10 +187,33 @@ header {
 @keyframes hideMenu {
 	0% {
 		margin-left: 0;
-
 	}
 
 	100% {
 		margin-left: -27%;
+	}
+}
+
+@keyframes minimizeTitle {
+	0% {
+		margin-top: 160px;
+		font-size: 56px;
+	}
+
+	100% {
+		margin-top: 14px;
+		font-size: 24px;
+	}
+}
+
+@keyframes maximizeTitle {
+	0% {
+		margin-top: 14px;
+		font-size: 24px;
+	}
+
+	100% {
+		margin-top: 160px;
+		font-size: 56px;
 	}
 }
