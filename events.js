@@ -1,9 +1,11 @@
 'use strict';
 
+// obtenemos todos los elementos que contienen la clase card
 let cards = document.getElementsByClassName('card');
 for (let card in cards) {
 
   if (cards[card] instanceof HTMLElement) {
+    // Añadimos el evento click a cada card
     cards[card].addEventListener('click', (event) => {
 
       let comp = true;
@@ -22,6 +24,7 @@ for (let card in cards) {
 
 };
 
+// evento que se ejecuta cuando se hace click en el boton de menu
 document.getElementById('contMenuIcon').addEventListener('click', () => {
 
   let menu = document.getElementById('menu');
@@ -36,6 +39,7 @@ document.getElementById('contMenuIcon').addEventListener('click', () => {
 
 });
 
+// evento que se ejecuta cuando se hace click en el boton de menu
 document.getElementById('contenedorMenu').addEventListener('click', () => {
 
   menu.classList.remove('menu_active');
@@ -45,6 +49,7 @@ document.getElementById('contenedorMenu').addEventListener('click', () => {
 
 });
 
+// evento que se ejecuta cuando se hace click en el boton de arriba
 document.getElementById('arriba').addEventListener('click', () => {
 
   window.scrollTo(0, 0);
@@ -61,6 +66,7 @@ window.onscroll = () => {
   let arriba = document.getElementById('contenedorArriba');
   let title = document.getElementById('titulo');
   
+  // si el scroll es mayor a 190px se muestra el boton de arriba
   if (scroll >= 190) {
     header.classList.add('collapseHeader');
     title.classList.add('titulo_collapse');
