@@ -2,6 +2,8 @@
 	--primary: #3F51B5;
 	--onPrimary: #fff;
 	--tertiary: #D32F2F;
+	--tertiaryContainer: #E57373;
+	--background: #E6E6E6;
 }
 
 /*  */
@@ -9,7 +11,7 @@ body {
 	margin: 0;
 	width: 100%;
 	font-family: 'Roboto', sans-serif;
-	background-color: #E6E6E6;
+	background-color: var(--background);
 }
 
 /* Estilo de la cabecera */
@@ -164,7 +166,7 @@ header {
 }
 
 #arriba:active {
-	background-color: #E57373;
+	background-color: var(--tertiaryContainer);
 }
 
 #arriba span {
